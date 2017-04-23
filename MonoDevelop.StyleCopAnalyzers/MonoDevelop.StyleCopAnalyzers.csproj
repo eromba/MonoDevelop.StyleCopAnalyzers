@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MonoDevelop.Addins.0.3.8\build\net40\MonoDevelop.Addins.props" Condition="Exists('..\packages\MonoDevelop.Addins.0.3.8\build\net40\MonoDevelop.Addins.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{237774FD-E88B-4260-BC55-2DFE06F6BA6E}</ProjectGuid>
+    <ProjectTypeGuids>{86F6BF2A-E449-4B3E-813B-9ACC37E5545F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MonoDevelop.StyleCopAnalyzers</RootNamespace>
+    <AssemblyName>MonoDevelop.StyleCopAnalyzers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AddinInfo.cs" />
+    <Compile Include="StartupHandler.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\FileHeaderCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\InheritdocCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\PropertySummaryDocumentationCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\SA1609SA1610CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\SA1615SA1616CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\SA1617CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\SA1626CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\SA1642SA1643CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\SA1649CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\DocumentationRules\SA1651CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\CustomBatchFixAllProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\CustomFixAllProviders.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\DocumentBasedFixAllProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\FixAllContextHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\FormattingHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\IndentationHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\QueryIndentationHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\RenameHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Helpers\SpecialTypeHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1500CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1501CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1502CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1503CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1504CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1505CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1506CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1507CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1508CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1509CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1510CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1511CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1512CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1513CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1514CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1515CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1516CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1517CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\LayoutRules\SA1518CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1119CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1400CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1402CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1404CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1407SA1408CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1407SA1408FixAllProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1410SA1411CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1412CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1412FixAllProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\MaintainabilityRules\SA1413CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\RenameToLowerCaseCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\RenameToUpperCaseCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\SA1302CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\SA1308CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\SA1309CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\SA1310CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\SA1314CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\NamingRules\SX1309CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\ElementOrderCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\SA1205CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\SA1206CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\SA1207CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\SA1212SA1213CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\UsingCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\UsingCodeFixProvider.SourceMap.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\UsingCodeFixProvider.TreeTextSpan.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\OrderingRules\UsingCodeFixProvider.UsingsSorter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\IndentationCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\RemoveRegionCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\RemoveRegionFixAllProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1100CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1101CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1102CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1103CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1104SA1105CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1106CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1107CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1107FixAllProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1116CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1120CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1121CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1122CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1127CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1128CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1129CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1130CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1131CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1132CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1133CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1134CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1136CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SA1139CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\ReadabilityRules\SX1101CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\Settings\SettingsFileCodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\SA1003CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\SA1004CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\SA1005CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\SA1018CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\SA1025CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\SA1027CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\SA1028CodeFixProvider.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\SpacingRules\TokenSpacingCodeFixProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Manifest.addin.xml" />
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\OrderingResources.resx">
+      <LogicalName>StyleCop.Analyzers.OrderingRules.OrderingResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\NamingResources.resx">
+      <LogicalName>StyleCop.Analyzers.NamingRules.NamingResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\MaintainabilityResources.resx">
+      <LogicalName>StyleCop.Analyzers.MaintainabilityRules.MaintainabilityResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\LayoutResources.resx">
+      <LogicalName>StyleCop.Analyzers.LayoutRules.LayoutResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.en-GB.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.en-GB.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.es-MX.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.es-MX.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.fr-FR.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.fr-FR.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.pl-PL.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.pl-PL.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.pt-BR.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.pt-BR.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.ru-RU.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.ru-RU.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.de-DE.resx">
+      <LogicalName>StyleCop.Analyzers.DocumentationRules.DocumentationResources.de-DE.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\SettingsResources.resx">
+      <LogicalName>StyleCop.Analyzers.Settings.SettingsResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpecialRules\SpecialResources.resx">
+      <LogicalName>StyleCop.Analyzers.SpecialRules.SpecialResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\ReadabilityResources.resx">
+      <LogicalName>StyleCop.Analyzers.ReadabilityRules.ReadabilityResources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SpacingResources.resx">
+      <LogicalName>StyleCop.Analyzers.SpacingRules.SpacingResources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\DocumentationResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\ElementDocumentationBase.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\ElementDocumentationSummaryBase.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\FileHeaderAnalyzers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\GenericTypeParameterDocumentationAnalyzer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\PartialElementDocumentationSummaryBase.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\PropertyDocumentationBase.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\PropertySummaryDocumentationAnalyzer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1600ElementsMustBeDocumented.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1601PartialElementsMustBeDocumented.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1602EnumerationItemsMustBeDocumented.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1603DocumentationMustContainValidXml.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1604ElementDocumentationMustHaveSummary.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1605PartialElementDocumentationMustHaveSummary.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1606ElementDocumentationMustHaveSummaryText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1607PartialElementDocumentationMustHaveSummaryText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1608ElementDocumentationMustNotHaveDefaultSummary.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1609PropertyDocumentationMustHaveValue.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1610PropertyDocumentationMustHaveValueText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1611ElementParametersMustBeDocumented.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1612ElementParameterDocumentationMustMatchElementParameters.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1613ElementParameterDocumentationMustDeclareParameterName.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1614ElementParameterDocumentationMustHaveText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1615ElementReturnValueMustBeDocumented.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1616ElementReturnValueDocumentationMustHaveText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1617VoidReturnValueMustNotBeDocumented.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1618GenericTypeParametersMustBeDocumented.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1619GenericTypeParametersMustBeDocumentedPartialClass.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1625ElementDocumentationMustNotBeCopiedAndPasted.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1626SingleLineCommentsMustNotUseDocumentationStyleSlashes.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1627DocumentationTextMustNotBeEmpty.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1628DocumentationTextMustBeginWithACapitalLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1629DocumentationTextMustEndWithAPeriod.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1630DocumentationTextMustContainWhitespace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1631DocumentationMustMeetCharacterPercentage.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1632DocumentationTextMustMeetMinimumCharacterLength.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1642ConstructorSummaryDocumentationMustBeginWithStandardText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1643DestructorSummaryDocumentationMustBeginWithStandardText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1644DocumentationHeadersMustNotContainBlankLines.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1645IncludedDocumentationFileDoesNotExist.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1646IncludedDocumentationXPathDoesNotExist.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1647IncludeNodeDoesNotContainValidFileAndPath.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1648InheritDocMustBeUsedWithInheritingClass.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1649FileNameMustMatchTypeName.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1650ElementDocumentationMustBeSpelledCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\SA1651DoNotUsePlaceholderElements.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\DocumentationRules\StandardTextDiagnosticBase.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\ObjectPools\ObjectPool`1.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\ObjectPools\PooledObject`1.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\ObjectPools\SharedPoolExtensions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\ObjectPools\SharedPools.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\ObjectPools\StringBuilderPool.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\AccessLevel.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\AccessLevelHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\DeclarationModifiersHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\DiagnosticOptionsHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\DocumentationCommentExtensions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\FileHeader.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\FileHeaderHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\FileNameHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\HelpersResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\LiteralExpressionHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\LocationHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\MemberOrderHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\ModifierOrderHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\NamedTypeHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\NameSyntaxHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\Requires.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\SpacingExtensions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\SpecializedTasks.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\SyntaxKinds.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\SyntaxTreeHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\TokenHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\TriviaHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\UsingDirectiveSyntaxHelpers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\UsingGroup.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\XmlCommentHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\XmlFileHeader.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\XmlSyntaxFactory.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\XPathExtensions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\LayoutResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1500BracesForMultiLineStatementsMustNotShareLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1501StatementMustNotBeOnASingleLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1502ElementMustNotBeOnASingleLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1503BracesMustNotBeOmitted.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1504AllAccessorsMustBeSingleLineOrMultiLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1505OpeningBracesMustNotBeFollowedByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1506ElementDocumentationHeadersMustNotBeFollowedByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1507CodeMustNotContainMultipleBlankLinesInARow.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1508ClosingBracesMustNotBePrecededByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1509OpeningBracesMustNotBePrecededByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1510ChainedStatementBlocksMustNotBePrecededByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1511WhileDoFooterMustNotBePrecededByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1512SingleLineCommentsMustNotBeFollowedByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1513ClosingBraceMustBeFollowedByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1514ElementDocumentationHeaderMustBePrecededByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1515SingleLineCommentMustBePrecededByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1516ElementsMustBeSeparatedByBlankLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1517CodeMustNotContainBlankLinesAtStartOfFile.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1518UseLineEndingsCorrectlyAtEndOfFile.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1519BracesMustNotBeOmittedFromMultiLineChildStatement.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LayoutRules\SA1520UseBracesConsistently.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\LinqHelpers\SyntaxTriviaListEnumerable.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\MaintainabilityResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1119StatementMustNotUseUnnecessaryParenthesis.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1400AccessModifierMustBeDeclared.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1401FieldsMustBePrivate.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1402FileMayOnlyContainASingleType.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1403FileMayOnlyContainASingleNamespace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1404CodeAnalysisSuppressionMustHaveJustification.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1405DebugAssertMustProvideMessageText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1406DebugFailMustProvideMessageText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1407ArithmeticExpressionsMustDeclarePrecedence.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1408ConditionalExpressionsMustDeclarePrecedence.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1409RemoveUnnecessaryCode.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1410RemoveDelegateParenthesisWhenPossible.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1411AttributeConstructorMustNotUseUnnecessaryParenthesis.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1412StoreFilesAsUtf8.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SA1413UseTrailingCommasInMultiLineInitializers.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\MaintainabilityRules\SystemDiagnosticsDebugDiagnosticBase.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\NamingResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1300ElementMustBeginWithUpperCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1301ElementMustBeginWithLowerCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1302InterfaceNamesMustBeginWithI.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1303ConstFieldNamesMustBeginWithUpperCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1304NonPrivateReadonlyFieldsMustBeginWithUpperCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1305FieldNamesMustNotUseHungarianNotation.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1306FieldNamesMustBeginWithLowerCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1307AccessibleFieldsMustBeginWithUpperCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1308VariableNamesMustNotBePrefixed.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1309FieldNamesMustNotBeginWithUnderscore.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1310FieldNamesMustNotContainUnderscore.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1311StaticReadonlyFieldsMustBeginWithUpperCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1312VariableNamesMustBeginWithLowerCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1313ParameterNamesMustBeginWithLowerCaseLetter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SA1314TypeParameterNamesMustBeginWithT.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SX1309FieldNamesMustBeginWithUnderscore.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NamingRules\SX1309SStaticFieldNamesMustBeginWithUnderscore.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\OrderingResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1200UsingDirectivesMustBePlacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1201ElementsMustAppearInTheCorrectOrder.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1202ElementsMustBeOrderedByAccess.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1203ConstantsMustAppearBeforeFields.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1204StaticElementsMustAppearBeforeInstanceElements.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1205PartialElementsMustDeclareAccess.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1206DeclarationKeywordsMustFollowOrder.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1207ProtectedMustComeBeforeInternal.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1208SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1209UsingAliasDirectivesMustBePlacedAfterOtherUsingDirectives.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1210UsingDirectivesMustBeOrderedAlphabeticallyByNamespace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1211UsingAliasDirectivesMustBeOrderedAlphabeticallyByAliasName.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1212PropertyAccessorsMustFollowOrder.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1213EventAccessorsMustFollowOrder.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1214ReadonlyElementsMustAppearBeforeNonReadonlyElements.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1216UsingStaticDirectivesMustBePlacedAtTheCorrectLocation.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\OrderingRules\SA1217UsingStaticDirectivesMustBeOrderedAlphabetically.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\ReadabilityResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1100DoNotPrefixCallsWithBaseUnlessLocalImplementationExists.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1101PrefixLocalCallsWithThis.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1106CodeMustNotContainEmptyStatements.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1107CodeMustNotContainMultipleStatementsOnOneLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1108BlockStatementsMustNotContainEmbeddedComments.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1109BlockStatementsMustNotContainEmbeddedRegions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA110xQueryClauses.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1110OpeningParenthesisMustBeOnDeclarationLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1111ClosingParenthesisMustBeOnLineOfLastParameter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1112ClosingParenthesisMustBeOnLineOfOpeningParenthesis.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1113CommaMustBeOnSameLineAsPreviousParameter.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1114ParameterListMustFollowDeclaration.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1115ParameterMustFollowComma.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1116SplitParametersMustStartOnLineAfterDeclaration.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1117ParametersMustBeOnSameLineOrSeparateLines.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1118ParameterMustNotSpanMultipleLines.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1120CommentsMustContainText.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1121UseBuiltInTypeAlias.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1122UseStringEmptyForEmptyStrings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1123DoNotPlaceRegionsWithinElements.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1124DoNotUseRegions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1125UseShorthandForNullableTypes.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1126PrefixCallsCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1127GenericTypeConstraintsMustBeOnOwnLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1128ConstructorInitializerMustBeOnOwnLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1129DoNotUseDefaultValueTypeConstructor.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1130UseLambdaSyntax.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1131UseReadableConditions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1132DoNotCombineFields.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1133DoNotCombineAttributes.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1134AttributesMustNotShareLine.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1136EnumValuesShouldBeOnSeparateLines.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1137ElementsShouldHaveTheSameIndentation.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SA1139UseLiteralSuffixNotationInsteadOfCasting.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ReadabilityRules\SX1101DoNotPrefixLocalMembersWithThis.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\DocumentationSettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\FileNamingConvention.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\IndentationSettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\LayoutSettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\MaintainabilitySettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\NamingSettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\OptionSetting.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\OrderingSettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\OrderingTrait.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\ReadabilitySettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\SettingsFile.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\SpacingSettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\StyleCopSettings.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\TopLevelType.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\ObjectModel\UsingDirectivesPlacement.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\DeserializationFailureBehavior.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\SettingsHelper.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\SettingsResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1000KeywordsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1001CommasMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1002SemicolonsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1003SymbolsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1004DocumentationLinesMustBeginWithSingleSpace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1005SingleLineCommentsMustBeginWithSingleSpace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1006PreprocessorKeywordsMustNotBePrecededBySpace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1007OperatorKeywordMustBeFollowedBySpace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1008OpeningParenthesisMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1009ClosingParenthesisMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1010OpeningSquareBracketsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1011ClosingSquareBracketsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1012OpeningBracesMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1013ClosingBracesMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1014OpeningGenericBracketsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1015ClosingGenericBracketsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1016OpeningAttributeBracketsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1017ClosingAttributeBracketsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1018NullableTypeSymbolsMustNotBePrecededBySpace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1019MemberAccessSymbolsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1020IncrementDecrementSymbolsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1021NegativeSignsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1022PositiveSignsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1023DereferenceAndAccessOfSymbolsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1024ColonsMustBeSpacedCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1025CodeMustNotContainMultipleWhitespaceInARow.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1026CodeMustNotContainSpaceAfterNewKeywordInImplicitlyTypedArrayAllocation.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1027UseTabsCorrectly.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SA1028CodeMustNotContainTrailingWhitespace.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\SpacingResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpacingRules\TokenSpacingProperties.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpecialRules\SA0001XmlCommentAnalysisDisabled.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpecialRules\SA0002InvalidSettingsFile.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\SpecialRules\SpecialResources.Designer.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\AnalyzerCategory.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\AnalyzerConstants.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\AnalyzerExtensions.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\ExcludeFromCodeCoverageAttribute.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NoCodeFixAttribute.cs" />
+    <Compile Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\NoDiagnosticAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Helpers\HelpersResources.resx" />
+    <None Include="StyleCopAnalyzers\StyleCop.Analyzers\StyleCop.Analyzers\Settings\stylecop.schema.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddinReference Include="MonoDevelop.CSharpBinding" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MonoDevelop.Addins.0.3.8\build\net40\MonoDevelop.Addins.targets" Condition="Exists('..\packages\MonoDevelop.Addins.0.3.8\build\net40\MonoDevelop.Addins.targets')" />
+</Project>

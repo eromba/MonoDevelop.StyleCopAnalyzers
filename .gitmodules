@@ -1,0 +1,3 @@
+[submodule "MonoDevelop.StyleCopAnalyzers/StyleCopAnalyzers"]
+	path = MonoDevelop.StyleCopAnalyzers/StyleCopAnalyzers
+	url = https://github.com/DotNetAnalyzers/StyleCopAnalyzers

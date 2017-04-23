@@ -1,0 +1,2 @@
+# MonoDevelop.StyleCopAnalyzers
+MonoDevelop addin that brings the C# analyzers and code fixes from [StyleCopAnalyzers](https://github.com/DotNetAnalyzers/StyleCopAnalyzers) to Xamarin Studio & Visual Studio for Mac
